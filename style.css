@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+/*
+    font-family: 'Big Shoulders Display', cursive;
+    font-family: 'Lexend Deca', sans-serif;
+*/
+
+:root {
+    /* Primary */
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    /* Neutral */
+    /*Paragraphs*/
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    /*Background, Headings, Buttons*/
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    width: 57.5rem;
+    height: 31.25rem;
+    border-radius: 0.5rem;
+}
+
+.container>.box>.text {
+    color: var(--transparent-white);
+
+    font-family: 'Lexend Deca', sans-serif;
+    line-height: 1.563em;
+    font-size: 0.938em;
+
+    margin: 1.563rem 0 0 2.969rem;
+    width: 13.25rem;
+}
+
+.container>.box>.title {
+    color: var(--very-light-gray);
+
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    font-size: 2.5em;
+
+    margin: 2.188rem 0 0 3rem;
+}
+
+.container>.box>.car_img {
+    height: 2.5rem;
+
+    margin: 3rem 0 0 3rem;
+}
+
+.container>.box>.butt {
+    width: 9.125rem;
+    height: 3rem;
+
+    border: none;
+    border-radius: 1.563rem;
+
+    font-family: 'Lexend Deca', sans-serif;
+    line-height: 1.563em;
+    font-size: 0.938em;
+
+    margin: 5.188rem 0 0 3rem;
+}
+
+.container>.box>.butt:hover {
+    background-color: transparent;
+    border: 2px solid var(--very-light-gray);
+    color: var(--very-light-gray);
+}
+
+.container>.orange {
+    background-color: var(--bright-orange);
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.container>.orange>.butt {
+    color: var(--bright-orange);
+}
+
+.container>.dark_cyan {
+    background-color: var(--dark-cyan);
+}
+
+.container>.dark_cyan>.butt {
+    color: var(--dark-cyan);
+}
+
+.container>.very_dark_cyan {
+    background-color: var(--very-dark-cyan);
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.container>.very_dark_cyan>.butt {
+    color: var(--very-dark-cyan);
+}
+
+
+@media screen and (max-width: 60.625rem) {
+    body {
+        align-items: flex-start;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        width: 20.438rem;
+    }
+
+    .container>.box {
+        height: 27.625rem;
+    }
+
+    .container>.box>.text {
+        margin: 1.563rem 0 0 3.031rem;
+    }
+
+    .container>.box>.title {
+        margin: 2.188rem 0 0 3.063rem;
+    }
+
+    .container>.box>.car_img {
+        margin: 3rem 0 0 3.063rem;
+    }
+
+    .container>.box>.butt {
+        margin: 1.563rem 0 0 3.063rem;
+    }
+
+    .container>.orange {
+        border-radius: 0.5rem 0.5rem 0 0;
+    }
+
+    .container>.very_dark_cyan {
+        border-radius: 0 0 0.5rem 0.5rem;
+    }
+}
